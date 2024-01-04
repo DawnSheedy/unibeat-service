@@ -16,6 +16,10 @@ jobs:
           java-version: '21'
           distribution: 'corretto'
           cache: maven
+      - name: Maven Install
+        run: mvn clean install -DskipTests
+      - name: Run Tests
+        run: mvn test
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
         with:
@@ -27,4 +31,4 @@ jobs:
       - name: Inject additional config
         run: "printf \"\n${{ secrets.STG_DEPLOY_PROPERTIES }}\" >> ./src/main/resources/application.properties"
       - name: Build/Deploy
-        run: mvn clean package -Dquarkus.kubernetes.deploy=true
+        run: mvn package -DskipTests -Dquarkus.kubernetes.deploy=true
