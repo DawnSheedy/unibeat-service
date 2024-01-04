@@ -22,6 +22,8 @@ jobs:
           token: ${{ secrets.DO_TOKEN }}
       - name: Log in to DO Container Registry
         run: doctl registry login --expiry-seconds 600
+      - name: Authenticate kubectl
+        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ds-k8s
       - name: Inject additional config
         run: "printf \"${{ secrets.STG_DEPLOY_PROPERTIES }}\" >> ./src/main/resources/application.properties"
       - name: Build/Deploy
