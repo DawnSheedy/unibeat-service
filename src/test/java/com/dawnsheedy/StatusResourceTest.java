@@ -12,7 +12,7 @@ public class StatusResourceTest {
     @Test
     public void testHelloEndpoint() {
         given()
-          .when().get("/status")
+          .when().get("/unibeat-service/status")
           .then()
              .statusCode(200)
              .body(is("unibeat-service"));

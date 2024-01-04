@@ -13,6 +13,7 @@ public class Song extends PanacheMongoEntity {
     public String title;
     public String artist;
     public double tempo;
+    public int length;
     @JsonIgnore
     public List<String> chartIds;
     @JsonIgnore
