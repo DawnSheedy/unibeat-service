@@ -1,7 +1,7 @@
 package com.dawnsheedy.resource;
 
-import com.dawnsheedy.model.GameDataType;
-import com.dawnsheedy.model.Song;
+import com.dawnsheedy.model.assets.GameDataType;
+import com.dawnsheedy.model.assets.Song;
 import com.dawnsheedy.util.S3FormData;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;

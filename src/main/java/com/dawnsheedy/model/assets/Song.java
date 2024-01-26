@@ -1,4 +1,4 @@
-package com.dawnsheedy.model;
+package com.dawnsheedy.model.assets;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;

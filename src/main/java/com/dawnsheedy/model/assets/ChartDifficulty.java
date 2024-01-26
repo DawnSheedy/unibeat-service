@@ -1,4 +1,4 @@
-package com.dawnsheedy.model;
+package com.dawnsheedy.model.assets;
 
 public enum ChartDifficulty {
     Basic("Basic"),

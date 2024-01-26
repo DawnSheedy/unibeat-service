@@ -1,4 +1,4 @@
-package com.dawnsheedy.model;
+package com.dawnsheedy.model.assets;
 
 import software.amazon.awssdk.services.s3.model.S3Object;
 

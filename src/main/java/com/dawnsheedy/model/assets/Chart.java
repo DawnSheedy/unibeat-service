@@ -1,4 +1,4 @@
-package com.dawnsheedy.model;
+package com.dawnsheedy.model.assets;
 
 import io.quarkus.mongodb.panache.PanacheMongoEntity;
 import io.quarkus.mongodb.panache.common.MongoEntity;

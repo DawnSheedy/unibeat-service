@@ -1,8 +1,7 @@
 package com.dawnsheedy.resource;
 
-import com.dawnsheedy.model.Song;
+import com.dawnsheedy.model.assets.Song;
 import jakarta.annotation.security.RolesAllowed;
-import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
