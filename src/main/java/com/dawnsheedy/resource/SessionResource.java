@@ -32,7 +32,7 @@ public class SessionResource {
 
     @Path("/{sessionId}")
     @GET
-    public GameSession test(String sessionId) {
+    public GameSession getSessionById(String sessionId) {
         return requestContext.getGameSession();
     }
 
