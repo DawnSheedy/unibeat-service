@@ -29,6 +29,6 @@ jobs:
       - name: Authenticate kubectl
         run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ds-k8s
       - name: Inject additional config
-        run: "printf \"\n${{ secrets.STG_DEPLOY_PROPERTIES }}\" >> ./src/main/resources/application.properties"
+        run: "printf \"\n${{ secrets.STG_DEPLOY_PROPERTIES }}\nquarkus.profile=staging\" >> ./src/main/resources/application.properties"
       - name: Build/Deploy
         run: mvn package -DskipTests -Dquarkus.kubernetes.deploy=true
