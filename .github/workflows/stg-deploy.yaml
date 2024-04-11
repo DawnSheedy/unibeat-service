@@ -5,7 +5,7 @@ on:
 
 jobs:
   build-test-deploy:
-    name: Build, Test and Publish to DO K8s
+    name: Build, Test and Publish to DO K8s (Staging)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -28,7 +28,7 @@ jobs:
         run: doctl registry login --expiry-seconds 600
       - name: Authenticate kubectl
         run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ds-k8s
-      - name: Inject additional config
+      - name: Inject additional staging config
         run: "printf \"\n${{ secrets.STG_DEPLOY_PROPERTIES }}\nquarkus.profile=staging\" >> ./src/main/resources/application.properties"
       - name: Build/Deploy
         run: mvn package -DskipTests -Dquarkus.kubernetes.deploy=true
